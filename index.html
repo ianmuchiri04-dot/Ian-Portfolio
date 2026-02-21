@@ -20,18 +20,19 @@
             background-color: #ffffff;
             -webkit-font-smoothing: antialiased;
             letter-spacing: -0.01em;
-            overflow-x: hidden; /* Prevents horizontal scroll on mobile */
+            overflow-x: hidden;
         }
         .text-teal { color: var(--teal); }
         .bg-teal { background-color: var(--teal); }
         .border-teal { border-color: var(--teal); }
         
-        /* Fixed: white-space nowrap prevents the name from breaking into 3 lines as seen in your screenshot */
+        /* Fixed: Reduced font size range to prevent the 'I' from wrapping on mid-sized screens */
         .hero-title {
-            font-size: clamp(3.5rem, 12vw, 11rem);
+            font-size: clamp(3rem, 10vw, 9.5rem);
             line-height: 0.9;
             font-weight: 900;
-            white-space: nowrap;
+            width: fit-content;
+            white-space: nowrap; /* Forces the words to stay on their respective lines */
         }
 
         .pro-r {
@@ -43,7 +44,6 @@
             color: transparent !important;
             -webkit-text-stroke: 1.5px black;
         }
-        /* Adjusted stroke for larger screens */
         @media (min-width: 1024px) {
             .outline-text { -webkit-text-stroke: 2px black; }
         }
@@ -71,7 +71,7 @@
             @apply w-full h-full object-cover transition-transform duration-700 hover:scale-105;
         }
 
-        /* Fixed: Prevents the broken image icon from showing if a link fails */
+        /* Prevents the browser question mark icon if an image loads slowly */
         img:not([src]), img[src=""] { opacity: 0; }
 
         .stats-grid-shadow {
@@ -82,13 +82,13 @@
             letter-spacing: 0.4em;
         }
 
-        /* Footer Box Hover Fix: Text remains visible while background turns black */
+        /* Footer Box Fix: Background turns black, text remains visible */
         .footer-box:hover {
             background-color: #000000 !important;
             border-color: #000000 !important;
         }
-        .footer-box:hover span:first-child { color: #9ca3af !important; } /* Gray label */
-        .footer-box:hover span:last-child { color: #ffffff !important; } /* White text */
+        .footer-box:hover span:first-child { color: #9ca3af !important; }
+        .footer-box:hover span:last-child { color: #ffffff !important; }
     </style>
 </head>
 <body class="selection:bg-teal selection:text-white">
@@ -107,7 +107,7 @@
                 <a href="#skills" class="text-[11px] font-black uppercase tracking-[0.2em] hover:text-teal transition-colors">Expertise</a>
                 <a href="#contact" class="text-[11px] font-black uppercase tracking-[0.2em] hover:text-teal transition-colors">Connect</a>
             </div>
-            <!-- Nav Link: LinkedIn -->
+            <!-- Top Nav Button: LinkedIn -->
             <a href="https://www.linkedin.com/in/ian-muchiri-086965278" target="_blank" class="bg-black text-white px-6 py-3 text-[10px] font-black tracking-widest uppercase hover:bg-teal transition-all">
                 Lets Connect
             </a>
@@ -120,9 +120,9 @@
             <div class="lg:col-span-8 relative">
                 <span class="text-teal font-black text-xs uppercase label-tracking mb-6 block">Building Audiences, Brands & Platforms</span>
                 <h1 class="hero-title uppercase mb-12">
-                    <!-- IAN: Full Solid Black -->
+                    <!-- Row 1: Solid Black IAN -->
                     <div class="tracking-[-0.06em] solid-fill">IAN</div>
-                    <!-- MUCHIRI: M is Outline, UCHIRI is Solid. Aligned flush left. -->
+                    <!-- Row 2: M is Outline, UCHIRI is Solid Black. Perfectly flush left. -->
                     <div class="tracking-[-0.04em]">
                         <span class="outline-text">M</span><span class="solid-fill">UCHI<span class="pro-r">R</span>I</span>
                     </div>
@@ -193,16 +193,16 @@
                     </div>
                 </div>
                 
-                <!-- REACH Image Grid: Cleaned up IDs to avoid question mark icons -->
+                <!-- REACH Image Grid: Updated with Thumbnail API for GitHub stability -->
                 <div class="lg:col-span-7 grid grid-cols-2 grid-rows-2 gap-2 h-[600px]">
                     <div class="image-container shadow-2xl">
-                        <img src="https://drive.google.com/uc?export=view&id=1cLBmv8t0iSDAuhnk1BxiGWzLEIQm3gHG" alt="REACH 1">
+                        <img src="https://drive.google.com/thumbnail?id=1cLBmv8t0iSDAuhnk1BxiGWzLEIQm3gHG&sz=w1200" alt="REACH 1">
                     </div>
                     <div class="image-container row-span-2 shadow-2xl">
-                        <img src="https://drive.google.com/uc?export=view&id=19VyyxygQ3b09ttRuDeEwduHQ6pyG_TMU" alt="REACH 2">
+                        <img src="https://drive.google.com/thumbnail?id=19VyyxygQ3b09ttRuDeEwduHQ6pyG_TMU&sz=w1200" alt="REACH Highlight">
                     </div>
                     <div class="image-container shadow-2xl">
-                        <img src="https://drive.google.com/uc?export=view&id=1uiukM7dZJ6jRw7q8cD-P6X6h07P2ifXd" alt="REACH 3">
+                        <img src="https://drive.google.com/thumbnail?id=1uiukM7dZJ6jRw7q8cD-P6X6h07P2ifXd&sz=w1200" alt="REACH 2">
                     </div>
                 </div>
             </div>
@@ -210,13 +210,13 @@
             <!-- TikTok Growth -->
             <div class="grid lg:grid-cols-12 gap-16 mb-48 items-center">
                 <div class="lg:col-span-6 grid grid-cols-2 gap-2 order-last lg:order-first">
-                    <div class="image-container aspect-[9/16]"><img src="https://drive.google.com/uc?export=view&id=1RKs6JrfTgSlCOyxmD7eAwEnYuKLScBDI" alt="TT1"></div>
-                    <div class="image-container aspect-[9/16]"><img src="https://drive.google.com/uc?export=view&id=1hyI_J416HJUhn_cag3ejFFZvoN0hbbVd" alt="TT2"></div>
+                    <div class="image-container aspect-[9/16]"><img src="https://drive.google.com/thumbnail?id=1RKs6JrfTgSlCOyxmD7eAwEnYuKLScBDI&sz=w1200" alt="TT1"></div>
+                    <div class="image-container aspect-[9/16]"><img src="https://drive.google.com/thumbnail?id=1hyI_J416HJUhn_cag3ejFFZvoN0hbbVd&sz=w1200" alt="TT2"></div>
                 </div>
                 <div class="lg:col-span-6 space-y-12">
                     <div class="bg-teal h-3 w-20"></div>
                     <h3 class="text-5xl font-black uppercase mb-6 tracking-tighter">TikTok Content Strategy</h3>
-                    <p class="text-gray-600 text-lg leading-relaxed font-semibold">Generating high-performing videos with 100K+ peak views through trend analysis and data-driven hooks.</p>
+                    <p class="text-gray-600 text-lg leading-relaxed mb-8 font-semibold">Generating high-performing videos with 100K+ peak views through trend analysis and data-driven hooks.</p>
                 </div>
             </div>
         </div>
@@ -226,7 +226,7 @@
     <section id="experience" class="py-32 px-8 bg-gray-50">
         <div class="max-w-[1200px] mx-auto">
             <h2 class="section-heading font-black uppercase mb-24 text-center">Experience</h2>
-            <div class="space-y-px bg-gray-200 border-2 border-gray-200">
+            <div class="space-y-px bg-gray-200 border-2 border-gray-100">
                 <div class="bg-white p-12 md:flex items-start justify-between hover:bg-black group transition-all duration-500">
                     <div>
                         <span class="text-[11px] font-black uppercase label-tracking mb-4 block group-hover:text-white/60">2026 — Present</span>
@@ -258,12 +258,12 @@
                     <span class="block text-[10px] font-black uppercase tracking-widest text-gray-400 mb-4">Lets Connect</span>
                     <span class="text-[11px] font-black uppercase text-black">Schedule a Meeting</span>
                 </a>
-                <!-- Footer Box 2: Resume -->
+                <!-- Footer Box 2: Resume Link -->
                 <a href="https://pdflink.to/8ba90924/" target="_blank" class="footer-box p-12 border-2 border-gray-100 transition-all text-left">
                     <span class="block text-[10px] font-black uppercase tracking-widest text-gray-400 mb-4">Résumé</span>
                     <span class="text-[11px] font-black uppercase text-black">Credentials</span>
                 </a>
-                <!-- Footer Box 3: LinkedIn -->
+                <!-- Footer Box 3: LinkedIn Profile -->
                 <a href="https://www.linkedin.com/in/ian-muchiri-086965278" target="_blank" class="footer-box p-12 border-2 border-gray-100 transition-all text-left">
                     <span class="block text-[10px] font-black uppercase tracking-widest text-gray-400 mb-4">Network</span>
                     <span class="text-[11px] font-black uppercase text-black">LinkedIn Profile</span>
