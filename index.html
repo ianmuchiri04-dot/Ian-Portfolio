@@ -118,7 +118,6 @@
                 <a href="#work" class="text-[11px] font-black uppercase tracking-[0.2em] hover:text-teal transition-colors">Portfolio</a>
                 <a href="#approach" class="text-[11px] font-black uppercase tracking-[0.2em] hover:text-teal transition-colors">Method</a>
                 <a href="#experience" class="text-[11px] font-black uppercase tracking-[0.2em] hover:text-teal transition-colors">Experience</a>
-                <!-- Restored Expertise Link -->
                 <a href="#skills" class="text-[11px] font-black uppercase tracking-[0.2em] hover:text-teal transition-colors">Expertise</a>
                 <a href="#contact" class="text-[11px] font-black uppercase tracking-[0.2em] hover:text-teal transition-colors">Connect</a>
             </div>
@@ -146,7 +145,8 @@
                     Growth-focused digital strategist specializing in audience development, short-form storytelling, and <span class="text-black font-extrabold border-b-4 border-teal">scalable content systems</span>. I build data-informed campaigns that convert cultural moments into growth.
                 </p>
                 <div class="flex flex-wrap gap-6">
-                    <a href="https://pdflink.to/8ba90924/" target="_blank" class="px-10 py-5 text-[11px] font-black uppercase tracking-[0.3em] border-2 border-black hover:bg-black hover:text-white transition-all duration-500">
+                    <!-- Updated to use new pdflink.to link -->
+                    <a href="https://pdflink.to/ad9f4de2/" target="_blank" class="px-10 py-5 text-[11px] font-black uppercase tracking-[0.3em] border-2 border-black hover:bg-black hover:text-white transition-all duration-500">
                         Resume
                     </a>
                 </div>
@@ -188,7 +188,6 @@
                 </p>
             </div>
 
-            <!-- space-y-48 gives huge vertical spacing between case studies so they NEVER overlap -->
             <div class="space-y-48">
 
                 <!-- 1. REACH UCLA Section -->
@@ -213,25 +212,28 @@
                             </div>
                         </div>
                     </div>
-                    <!-- REACH Image Grid: Flow-based layout prevents overlapping heights -->
-                    <div class="lg:col-span-7 grid grid-cols-2 gap-4">
-                        <div class="flex flex-col gap-4">
-                            <div class="image-container rounded-xl shadow-xl aspect-[4/3]">
+                    
+                    <!-- REACH Image Grid FIX: Rectangular containers for the rectangular images -->
+                    <div class="lg:col-span-7 flex flex-col md:flex-row gap-4">
+                        <div class="flex-1 flex flex-col gap-4">
+                            <div class="image-container shadow-xl rounded-xl aspect-video w-full">
                                 <img src="https://drive.google.com/thumbnail?id=1cLBmv8t0iSDAuhnk1BxiGWzLEIQm3gHG&sz=w1200" alt="REACH Event 1">
                             </div>
-                            <div class="image-container rounded-xl shadow-xl aspect-[4/3]">
+                            <!-- Rectangular frame for horizontal images -->
+                            <div class="image-container shadow-xl rounded-xl aspect-video w-full">
                                 <img src="https://drive.google.com/thumbnail?id=1uiukM7dZJ6jRw7q8cD-P6X6h07P2ifXd&sz=w1200" alt="REACH Event 2">
                             </div>
                         </div>
-                        <div class="image-container rounded-xl shadow-xl h-full min-h-[300px]">
-                            <img src="https://drive.google.com/thumbnail?id=19VyyxygQ3b09ttRuDeEwduHQ6pyG_TMU&sz=w1200" alt="REACH Filter">
+                        <div class="flex-1">
+                            <div class="image-container shadow-xl rounded-xl h-full min-h-[300px]">
+                                <img src="https://drive.google.com/thumbnail?id=19VyyxygQ3b09ttRuDeEwduHQ6pyG_TMU&sz=w1200" alt="REACH Filter" class="object-cover object-top">
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- 2. TikTok Strategy Section -->
                 <div class="grid lg:grid-cols-12 gap-16 items-center">
-                    <!-- Text on the left for this one -->
                     <div class="lg:col-span-5 space-y-10">
                         <div class="bg-teal h-3 w-20"></div>
                         <div>
@@ -246,7 +248,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Restored all 4 TikTok images in a staggered column layout -->
                     <div class="lg:col-span-7 grid grid-cols-2 md:grid-cols-4 gap-4">
                         <div class="image-container shadow-xl rounded-xl aspect-[9/16]">
                             <img src="https://drive.google.com/thumbnail?id=1RKs6JrfTgSlCOyxmD7eAwEnYuKLScBDI&sz=w1200" alt="TikTok 1">
@@ -276,22 +277,21 @@
                             <div class="grid grid-cols-3 gap-2 mt-4">
                                 <div class="bg-white p-4 text-[9px] font-black uppercase tracking-widest border-2 border-gray-100 text-center">MVP Core</div>
                                 <div class="bg-white p-4 text-[9px] font-black uppercase tracking-widest border-2 border-gray-100 text-center">JUCO Pilot</div>
-                                <div class="bg-white p-4 text-[9px] font-black uppercase tracking-widest border-2 border-gray-100 text-center">Go To Market</div>
+                                <div class="bg-white p-4 text-[9px] font-black uppercase tracking-widest border-2 border-gray-100 text-center whitespace-nowrap">Go To Market</div>
                             </div>
                         </div>
                     </div>
-                    <!-- Motion Image Grid -->
-                    <div class="lg:col-span-7 grid grid-cols-2 gap-4">
-                        <div class="image-container shadow-xl rounded-xl aspect-square">
+                    <div class="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="image-container shadow-xl rounded-xl aspect-video w-full">
                             <img src="https://drive.google.com/thumbnail?id=1yA6EcfWaGecy6EZj_AZriNTcYbAfE_9a&sz=w1200" alt="Motion Interface">
                         </div>
-                        <div class="image-container shadow-xl rounded-xl aspect-square mt-8 md:mt-16">
+                        <div class="image-container shadow-xl rounded-xl aspect-video w-full">
                             <img src="https://drive.google.com/thumbnail?id=1Q15gRUTK0bhlJOYFXOfGKlfDV78LT1Ip&sz=w1200" alt="Motion Analytics">
                         </div>
-                        <div class="image-container shadow-xl rounded-xl aspect-square -mt-8 md:-mt-16">
+                        <div class="image-container shadow-xl rounded-xl aspect-video w-full">
                             <img src="https://drive.google.com/thumbnail?id=1A0v9UX7EaZ0vrBWiKymg7KQ__y67Sueo&sz=w1200" alt="Motion Athlete Profile">
                         </div>
-                        <div class="image-container shadow-xl rounded-xl aspect-square">
+                        <div class="image-container shadow-xl rounded-xl aspect-video w-full">
                             <img src="https://drive.google.com/thumbnail?id=1i-9hCJKGey-fRvvJN6_q6_SeZFFbs9N-&sz=w1200" alt="Motion Feed">
                         </div>
                     </div>
@@ -303,25 +303,22 @@
 
     <!-- Methodology Section -->
     <section id="approach" class="py-32 px-8 bg-black text-white relative z-20">
-        <div class="max-w-[1500px] mx-auto">
+        <div class="max-w-[1500px] mx-auto text-center">
             <h2 class="section-heading font-black uppercase mb-24 text-center text-white">How I Approach Growth</h2>
-            <div class="grid lg:grid-cols-3 gap-16">
+            <div class="grid lg:grid-cols-3 gap-16 text-left">
                 <div class="border-t-2 border-white/20 pt-12 group hover:border-teal transition-colors duration-500">
                     <span class="text-6xl font-black text-teal block mb-8">01</span>
                     <h3 class="text-2xl font-black uppercase mb-6 tracking-tight text-white">Diagnose</h3>
-                    <p class="text-gray-400 text-xs font-black uppercase label-tracking mb-6">Phase: Discovery</p>
                     <p class="text-white text-sm leading-8 font-bold">Map behavioral patterns, platform algorithms, and content signals to identify high-retention segments.</p>
                 </div>
                 <div class="border-t-2 border-white/20 pt-12 group hover:border-teal transition-colors duration-500">
                     <span class="text-6xl font-black text-teal block mb-8">02</span>
                     <h3 class="text-2xl font-black uppercase mb-6 tracking-tight text-white">Engineer</h3>
-                    <p class="text-gray-400 text-xs font-black uppercase label-tracking mb-6">Phase: Architecture</p>
                     <p class="text-white text-sm leading-8 font-bold">Design repeatable content and distribution engines that scale growth beyond one-off virality spikes.</p>
                 </div>
                 <div class="border-t-2 border-white/20 pt-12 group hover:border-teal transition-colors duration-500">
                     <span class="text-6xl font-black text-teal block mb-8">03</span>
                     <h3 class="text-2xl font-black uppercase mb-6 tracking-tight text-white">Optimize</h3>
-                    <p class="text-gray-400 text-xs font-black uppercase label-tracking mb-6">Phase: Scale</p>
                     <p class="text-white text-sm leading-8 font-bold">Implement real-time performance feedback loops to improve conversion, retention, and monetization.</p>
                 </div>
             </div>
@@ -343,9 +340,9 @@
                 <div class="bg-white p-12 md:flex items-start justify-between hover:bg-black group transition-all duration-500">
                     <div>
                         <span class="text-[10px] font-black uppercase tracking-widest mb-2 block group-hover:text-gray-400 transition-colors">2024 — Present</span>
-                        <h3 class="text-2xl font-black uppercase group-hover:text-white transition-colors">Brand Collaborations</h3>
+                        <h3 class="text-3xl font-black uppercase group-hover:text-white transition-colors">Brand Collaborations</h3>
                     </div>
-                    <p class="max-w-md text-gray-600 group-hover:text-gray-300 font-medium pt-4 md:pt-0 transition-colors">Digital Strategy and content creation for emerging lifestyle brands with a focus on high-retention short-form video.</p>
+                    <p class="max-w-md text-gray-600 group-hover:text-white/80 font-medium transition-colors">Digital Strategy and content creation for emerging lifestyle brands with a focus on high-retention short-form video.</p>
                 </div>
             </div>
         </div>
@@ -408,7 +405,8 @@
                     <span class="block text-[10px] font-black uppercase tracking-widest text-gray-400 mb-4 transition-colors">Lets Connect</span>
                     <span class="text-[11px] font-black uppercase text-black transition-colors">Schedule a Meeting</span>
                 </a>
-                <a href="https://pdflink.to/8ba90924/" target="_blank" class="footer-box p-12 border-2 border-gray-200 bg-white transition-all text-left shadow-sm">
+                <!-- Updated to use new pdflink.to link -->
+                <a href="https://pdflink.to/ad9f4de2/" target="_blank" class="footer-box p-12 border-2 border-gray-200 bg-white transition-all text-left shadow-sm">
                     <span class="block text-[10px] font-black uppercase tracking-widest text-gray-400 mb-4 transition-colors">Résumé</span>
                     <span class="text-[11px] font-black uppercase text-black transition-colors">Credentials</span>
                 </a>
@@ -418,7 +416,7 @@
                 </a>
             </div>
             <div class="flex justify-between items-center text-[10px] font-black uppercase tracking-widest text-teal">
-                <span>Ian Muchiri // Growth Strategist</span>
+                <span>Ian Muchiri // Lead Strategist</span>
                 <span>Los Angeles &bull; UCLA '26</span>
             </div>
         </div>
